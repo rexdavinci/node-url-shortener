@@ -8,7 +8,7 @@ export default initRoutes = (app)=> {
 
 	app.post('/api/clip', (req, res)=> trimUrl(req, res));
 
-	router.route('/api/clip/:id', linkController.redirectLink)
+	router.get('/api/clip/:code', linkController.redirectLink)
 
 	app.delete('/api/clip/:id', (req, res)=> deleteUrl(req, res));
 };
